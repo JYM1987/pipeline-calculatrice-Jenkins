@@ -7,6 +7,12 @@ pipeline {
                    echo 'nom-de-la-branche'
              } 
         }  
+        stage('Branch') {
+            agent any
+            steps {
+                   echo "Test commit"
+             } 
+        } 
         stage('Build') {
             agent {
                 docker {
